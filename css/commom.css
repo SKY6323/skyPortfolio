@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+::selection{
+    background: #72B1EE;
+    color:#fff;
+}
+
+/* html */
+html{
+    overflow: hidden;
+    cursor:  url(../img/cursor.png), auto;
+}
+
+/* wrap */
+.wrap{
+    width: 100%;
+    background: #f9f9f9;
+    position: relative;
+}
+
+/* header */
+header{
+    position: fixed;
+    width: 100vw; height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2%; box-sizing: border-box;
+    transition: all 0.3s;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    background-color: rgba(114, 177, 238, 0.5);
+}
+header:hover{background-color: rgba(114, 177, 238, 0.8);}
+header.on{
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* logo */
+.logo{height: 50px;}
+.logo img{height: 100%;}
+
+/* nav */
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul > li{margin-left: 20px;}
+nav ul > li > a{
+    display: block;
+    padding: 0 10px; box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s;
+    color: #fff;
+    position: relative;
+}
+nav ul > li > a::before{
+    content: '';
+    width: 5px; height: 5px;
+    background: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: -10px; left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+nav ul > li > a:hover::before{opacity: 1;}
+nav ul > li > a:hover{color: #fff;}
+header.on nav ul > li > a{color: #111;}
+header.on nav ul > li > a::before{background: #72B1EE;}
+header.on nav ul > li > a:hover{color: #72B1EE;}
+
+/* top */
+.top{
+    position: fixed;
+    bottom: 4%; right: -180px;
+    margin: 0 2%;
+    border: none;
+    background: #72B1EE;
+    color: #fff;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.5s;
+    z-index: 10;
+    opacity: 0;
+    line-height: 5.5;
+    cursor: pointer;
+}
+.top:hover{
+    background: #111;
+}
+.top::before{
+    content: '';
+    position: absolute;
+    top: 14px; left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    border-right: 8px solid #fff;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+.top.on{
+    right: 0;
+    opacity: 1;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+/* cont */
+.cont{
+    height: 100vh;
+    padding: 0 10%; box-sizing: border-box;
+    position: relative;
+}
+.cont + .cont{
+    padding-top: 130px; box-sizing: border-box;
+}
