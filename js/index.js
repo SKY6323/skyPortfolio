@@ -50,56 +50,62 @@ function typingStart(){
 /* skill 설명 */
 $('.skill > li').mouseover(function(){
     const $skillex = $('.skill_ex')
+    const $skillexp = $('.skill_ex > p')
 
     switch($(this).index()){
         case 0:
-            $skillex.text('html');
+            $skillexp.text('유효성 문제 없이 HTML5 웹접근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성할 수 있습니다.');
             $skillex.addClass('on');
+            $skillex.css('background-color', 'rgba(255,87,34,0.1)')
             break;
 
         case 1:
-            $skillex.text('css');
+            $skillexp.text('CSS3 다양한 최신 트렌드 디자인과 애니메이션을 구성하며 JAVASCRIPT와 연동할 수 있는 화려한 디자인을 제작할 수 있습니다.');
             $skillex.addClass('on');
+            $skillex.css('background-color', 'rgba(20,111,175,0.1)')
             break;
 
         case 2:
-            $skillex.text('js');
+            $skillexp.text('슬라이드, 메뉴, 스크롤 애니메이션 기능 등 최신 트렌드에 적용된 다양한 동적 기능을 자바스크립트와 제이쿼리로 구현 가능합니다.');
             $skillex.addClass('on');
+            $skillex.css('background-color', 'rgba(247,196,39,0.1)')
             break;
             
         case 3:
-            $skillex.text('jq');
+            $skillexp.text('사진 보정, 합성, 상세 페이지, SNS 디자인 등 다양한 실무 디자인을 창의적으로 제작할 수 있습니다.');
             $skillex.addClass('on');
+            $skillex.css('background-color', 'rgba(45,37,95,0.1)')
             break;
-        
+
         case 4:
-            $skillex.text('ps');
+            $skillexp.text('react를 이용한 프레임워크 환경에서 컴포넌트 단위의 마크업 작업이 가능합니다.');
             $skillex.addClass('on');
+            $skillex.css('background-color', 'rgba(94,211,243,0.1)')
             break;
 
         case 5:
-            $skillex.text('react');
+            $skillexp.text('git 명령어를 활용한 gitHub 프로젝트 관리를 진행할 수 있습니다.');
             $skillex.addClass('on');
+            $skillex.css('background-color', 'rgba(232,78,49,0.1)')
             break;
 
         case 6:
-            $skillex.text('git');
+            $skillexp.text('외에도 XD, Illustrator, Word, PPT, Excel, Figma 등의 프로그램과 Notion과 같은 웹 도구를 다룰 수 있습니다. ');
             $skillex.addClass('on');
-            break;
-
-        case 7:
-            $skillex.text('ect');
-            $skillex.addClass('on');
+            $skillex.css('background-color', 'rgba(119,201,81,0.1)')
             break;
         
         default:
-            $skillex.text('이미지에 마우스를 올려 보세요!');
+            $skillexp.text('이미지에 마우스를 올려 보세요!');
+            $skillex.css('background-color', 'background: rgba(0, 0, 0, 0.6)')
     }
 })
 
 $('.skill').mouseout(function(){
     const $skillex = $('.skill_ex')
+    const $skillexp = $('.skill_ex > p')
 
     $skillex.removeClass('on')
-    $skillex.text('이미지에 마우스를 올려 보세요!');
+    $skillexp.text('이미지에 마우스를 올려 보세요!');
+    $skillex.css('background-color', 'background: rgba(0, 0, 0, 0.6)')
 })
