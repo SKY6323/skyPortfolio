@@ -8,11 +8,9 @@ $('header').each(function(){
         if($win.scrollTop() > wrapHeight){
             $header.addClass('on')
             $('.top').addClass('on')
-            $('.logo > a > img').attr('src', 'img/icon/icon_logoS.png')
         }else{
             $header.removeClass('on')
             $('.top').removeClass('on')
-            $('.logo > a > img').attr('src', 'img/icon/icon_logo.png')
         }
     })
 })

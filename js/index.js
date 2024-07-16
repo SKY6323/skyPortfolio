@@ -60,7 +60,7 @@ $('.skill > li').mouseover(function(){
             break;
 
         case 1:
-            $skillexp.text('CSS3 다양한 최신 트렌드 디자인과 애니메이션을 구성하며 JAVASCRIPT와 연동할 수 있는 화려한 디자인을 제작할 수 있습니다.');
+            $skillexp.text('CSS3 디자인과 애니메이션을 구성하며 JAVASCRIPT와 연동할 수 있는 화려한 디자인을 제작할 수 있습니다.');
             $skillex.addClass('on');
             $skillex.css('background-color', 'rgba(20,111,175,0.1)')
             break;
@@ -96,7 +96,7 @@ $('.skill > li').mouseover(function(){
             break;
         
         default:
-            $skillexp.text('이미지에 마우스를 올려 보세요!');
+            $skillexp.text('이미지를 클릭 해보세요!');
             $skillex.css('background-color', 'background: rgba(0, 0, 0, 0.6)')
     }
 })
@@ -106,6 +106,6 @@ $('.skill').mouseout(function(){
     const $skillexp = $('.skill_ex > p')
 
     $skillex.removeClass('on')
-    $skillexp.text('이미지에 마우스를 올려 보세요!');
+    $skillexp.text('이미지를 클릭 해보세요!');
     $skillex.css('background-color', 'background: rgba(0, 0, 0, 0.6)')
 })

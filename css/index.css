@@ -22,7 +22,7 @@
 .main h2{
     font-family: 'EF_watermelonSalad';
     color: #fff;
-    font-size: 150px;
+    font-size: 130px;
     position: relative;
 }
 .main .down{
@@ -103,9 +103,23 @@
     justify-content: space-around;
     align-items: center;
     gap: 50px;
-    border-left: 1px solid #72B1EE;
-    border-right: 1px solid #72B1EE;
     position: relative;
+}
+.profile > .my::after{
+    content: '';
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+    width: 1px; height: 100%;
+    background: #72B1EE;
+}
+.profile > .my::before{
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 1px; height: 100%;
+    background: #72B1EE;
 }
 .profile > .typing{
     width: 100%;
@@ -219,6 +233,7 @@
 }
 .history > li > ul > li{
     margin-bottom: 15px;
+    word-break: keep-all;
 }
 .history > li > ul > li strong{
     display: inline-block;
