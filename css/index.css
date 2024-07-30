@@ -379,19 +379,12 @@
     position: relative;
     border: 1px solid rgba(17, 17, 17, 0.08) inset;
 }
-.list .left figure img{
+.list .left figure img, .list .left figure video{
     width: 100%;
     position: absolute;
     top: 0; left: 0;
     z-index: -1;
 }
-/* 이미지 크기 1920기준 -631px */
-.list .left figure .asty{transition: all 4s linear;}
-.list .left figure:hover .asty{top: -2358px;} 
-.list .left figure .modu{transition: all 1.5s linear;}
-.list .left figure:hover .modu{top: -798px;}
-.list .left figure .dear{transition: all 2.5s linear;}
-.list .left figure:hover .dear{top: -1290px;}
 
 /* portSlide right */
 .list .right p{

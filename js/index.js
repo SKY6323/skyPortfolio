@@ -48,7 +48,7 @@ function typingStart(){
 }
 
 /* skill 설명 */
-$('.skill > li').mouseover(function(){
+$('.skill > li').on('click',function(){
     const $skillex = $('.skill_ex')
     const $skillexp = $('.skill_ex > p')
 
@@ -109,3 +109,26 @@ $('.skill').mouseout(function(){
     $skillexp.text('이미지를 클릭 해보세요!');
     $skillex.css('background-color', 'background: rgba(0, 0, 0, 0.6)')
 })
+
+/* 슬라이드 진행도 */
+$('.portSlide').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    var calc = ((nextSlide + 1) / slick.slideCount) * 100;
+    $('.progressbar').css('background-size', calc + '% 100%').attr('a')
+})
+
+/* 슬라이드 스크롤 */
+$('.asty').hover(function(){
+    $(this).animate({scrollTop : $(this)[0].scrollHeight}, 4000, "linear")
+},(function(){
+    $(this).animate({scrollTop : 0}, 1000, "linear")
+}))
+$('.modu').hover(function(){
+    $(this).animate({scrollTop : $(this)[0].scrollHeight}, 2000, "linear")
+},(function(){
+    $(this).animate({scrollTop : 0}, 1000, "linear")
+}))
+$('.dear').hover(function(){
+    $(this).animate({scrollTop : $(this)[0].scrollHeight}, 3000, "linear")
+},(function(){
+    $(this).animate({scrollTop : 0}, 1000, "linear")
+}))
